@@ -5,7 +5,7 @@ var burger = require("../models/burger.js")
 router.get("/", function(req, res) {
     burger.selectAll(function(data) {
       var allBurgs = {
-        burgers: data
+        burger: data
       };
       console.log(allBurgs);
       res.render("index", allBurgs);
@@ -22,3 +22,5 @@ router.get("/", function(req, res) {
 //       res.json({ id: result.insertId });
 //     });
 //   });
+
+module.exports = router;
