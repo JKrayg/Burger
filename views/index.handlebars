@@ -1,0 +1,24 @@
+<h1>burgers n stuff</h1>
+
+<div class="row">
+  {{! Burgers to eat}}
+  <div class="col-md-6">
+    <ul>
+      {{#each burger}}
+        {{#unless this.devoured}}
+          <div class="card light-green">
+            <p>
+              {{this.id}}. {{this.burger_name}}
+
+              <form action="update/{{this.id}}?_method=PUT" method="POST">
+                <input type="hidden" name="devoured" value="1">
+                <button type="submit" class="waves-effect waves-light btn green z-depth-4">DEVOUR IT!</button>
+              </form>
+  
+            </p>
+          </div>
+        {{/unless}}
+      {{/each}}
+    </ul>
+  </div>
+</div>
