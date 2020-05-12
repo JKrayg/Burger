@@ -6,13 +6,12 @@
     <ul>
       {{#each burger}}
         {{#unless this.devoured}}
-          <div class="card light-green">
+          <div class="undevouredBurgers">
             <p>
               {{this.id}}. {{this.burger_name}}
 
               <form action="update/{{this.id}}?_method=PUT" method="POST">
-                <input type="hidden" name="devoured" value="1">
-                <button type="submit" class="waves-effect waves-light btn green z-depth-4">DEVOUR IT!</button>
+                <button type="submit" class="devourButton">DEVOUR IT!</button>
               </form>
   
             </p>
