@@ -1,0 +1,59 @@
+body {
+    background-color: lightgray;
+}
+
+.container {
+    background-color: rgb(213, 46, 46);
+    padding: 20px;
+    padding-left: 20px;
+    border: solid white 10px;
+    border-radius: 20px;
+    border-start-end-radius: 20px;
+}
+
+.newBurgCon {
+    background-color: rgb(235, 235, 77);
+    text-align: center;
+    margin-left: 15px;
+    width: 48%;
+    border-radius: 50px;
+    box-shadow: 5px 10px 5px rgb(169, 37, 37);
+}
+
+.devBurgCon {
+    background-color: rgb(235, 235, 77);
+    text-align: center;
+    margin-left: 15px;
+    width: 48%;
+    border-radius: 50px;
+    box-shadow: 5px 10px 5px rgb(169, 37, 37);
+}
+
+.inner1 {
+    max-width: none;
+}
+
+h1 {
+    text-align: center;
+}
+
+#addForm {
+    text-align: center;
+    margin-top: 30px;
+}
+
+ul {
+    padding-inline-start: 0px;
+}
+
+h3 {
+    font-family: 'Permanent Marker', cursive;
+}
+
+.addBurgerButton {
+    border-radius: 3px;
+}
+
+#name {
+    border-radius: 3px;
+}
