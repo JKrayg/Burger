@@ -6,6 +6,11 @@ var burgy = {
             cb(res)
         });
 
+    },
+    insertOne: function (cols, vals, cb) {
+        orm.insertOne("burger", cols, vals, function(res) {
+            cb(res);
+        })
     }
 };
 

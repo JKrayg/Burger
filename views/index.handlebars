@@ -1,42 +1,46 @@
-<h1>burgers n stuff</h1>
 <div class="container">
+ <h1>burgers n stuff</h1> 
   <div class="row">
-    {{! Burgers to eat}}
-    <div class="col-md-6">
-      <ul>
-        {{#each burger}}
-        {{#unless this.devoured}}
-        <div class="undevouredBurgers">
-          <p>{{this.id}}. {{this.burger_name}}</p>
-          <form action="update/{{this.id}}?_method=PUT" method="POST">
-            <button type="submit" class="devourButton">DEVOUR IT!</button>
-          </form>
-        </div>
-        {{/unless}}
-        {{/each}}
-      </ul>
+    <div class="newBurgCon">
+      <div class="col-md-6 inner1">
+        <ul>
+          {{#each burger}}
+          {{#unless this.devoured}}
+          <div class="undevouredBurgers">
+            <h3>{{this.id}}. {{this.burger_name}}</h3>
+            <form action="update/{{this.id}}?_method=PUT" method="POST">
+              <button type="submit" class="devourButton">DEVOUR IT!</button>
+            </form>
+          </div>
+          {{/unless}}
+          {{/each}}
+        </ul>
+      </div>
     </div>
-    <div class="col-md-6">
-      <ul>
-        {{#each burger}}
-        {{#if this.devoured}}
-        <div class="devouredBurgers">
-          <p>{{this.id}}. {{this.burger_name}}</p>
-          <form action="delete/{{this.id}}?_method=DELETE" method="POST">
-            <button type="submit" class="removeButton">Remove</button>
-          </form>
-        </div>
-        {{/if}}
-        {{/each}}
-      </ul>
+    <div class="devBurgCon">
+      <div class="col-md-6 inner2">
+        <ul>
+          {{#each burger}}
+          {{#if this.devoured}}
+          <div class="devouredBurgers">
+            <p>{{this.id}}. {{this.burger_name}}</p>
+            <form action="delete/{{this.id}}?_method=DELETE" method="POST">
+              <button type="submit" class="removeButton">Remove</button>
+            </form>
+          </div>
+          {{/if}}
+          {{/each}}
+        </ul>
+      </div>
     </div>
+
   </div>
   <div class="row">
     <div class="col-md-12">
       <form id="addForm" action="/burger" method="POST">
-        <label for="name">Add Burger</label>
+        <label for="name">Build a Burger!</label>
         <input type="text" id="name" name="burger_name">
-        <button type="submit" class="addBurgerButton">Add The Burger</button>
+        <button type="submit" class="addBurgerButton">Build</button>
       </form>
     </div>
   </div>
