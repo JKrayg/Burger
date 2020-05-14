@@ -10,6 +10,18 @@ function questionMarks(input) {
     return arr.toString();
 }
 
+function objToSql(ob) {
+    var arr = [];
+
+    for (var key in ob) {
+        var value = ob[key];
+
+        arr.push(key + "=" + value);
+    }
+
+    return arr.toString();
+}
+
 var orm = {
     selectAll: function (tableName, cb) {
         var query = "SELECT * FROM " + tableName + ";"
@@ -31,6 +43,20 @@ var orm = {
         console.log(query);
 
         connection.query(query, vals, function (err, result) {
+            if (err) throw err;
+            cb(result);
+        })
+    },
+
+    updateOne: function (table, objColVals, condition, cb) {
+        var query = "UPDATE " + table;
+
+        query += " SET ";
+        query += objToSql(objColVals);
+        query += " WHERE ";
+        query += condition;
+
+        connection.query(query, function (err, result) {
             if (err) throw err;
             cb(result);
         })

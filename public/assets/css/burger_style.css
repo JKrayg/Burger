@@ -9,6 +9,7 @@ body {
     border: solid white 10px;
     border-radius: 20px;
     border-start-end-radius: 20px;
+    box-shadow: 5px 10px 5px rgb(126, 126, 126);
 }
 
 .newBurgCon {
@@ -30,6 +31,10 @@ body {
 }
 
 .inner1 {
+    max-width: none;
+}
+
+.inner2 {
     max-width: none;
 }
 
