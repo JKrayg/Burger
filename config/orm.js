@@ -60,6 +60,17 @@ var orm = {
             if (err) throw err;
             cb(result);
         })
+    },
+
+    removeOne: function (table, condition, cb) {
+        var query = "DELETE FROM " + table;
+        query += " WHERE ";
+        query += condition;
+
+        connection.query(query, function (err, result) {
+            if (err) throw err;
+            cb(result);
+        })
     }
 }
 

@@ -23,7 +23,7 @@ router.put("/burger/:id", function (req, res) {
 
   burger.updateOne({
     devoured: true
-  }, condition, function (data) {
+  }, condition, function (result) {
     if (result.affectedRows == 0) {
       return res.status(404).end();
 
