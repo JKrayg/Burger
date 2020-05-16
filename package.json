@@ -1,5 +1,5 @@
 {
-  "name": "Burgers",
+  "name": "burgers",
   "version": "1.0.0",
   "description": "eat burgers",
   "main": "server.js",
