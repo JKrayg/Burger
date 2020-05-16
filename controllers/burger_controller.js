@@ -37,7 +37,16 @@ router.put("/burger/:id", function (req, res) {
 
 router.delete("/burger/:id", function (req, res) {
   var condition = "id = " + req.params.id;
-  
+  burger.removeOne(condition, function (result) {
+    if (result.affectedRows == 0) {
+      return res.status(404).end();
+
+    } else {
+      res.redirect("/")
+      res.status(200).end();
+
+    }
+  })
 })
 
 module.exports = router;
