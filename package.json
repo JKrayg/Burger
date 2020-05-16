@@ -1,12 +1,19 @@
 {
-  "name": "Burger",
+  "name": "starwars",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "Helps you find the characters you are looking for",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "method-override": "^3.0.0",
+    "mysql": "^2.18.1"
   },
+  "scripts": {
+    "start": "node server.js"
+  
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JKrayg/Burger.git"
@@ -17,12 +24,5 @@
   "bugs": {
     "url": "https://github.com/JKrayg/Burger/issues"
   },
-  "homepage": "https://github.com/JKrayg/Burger#readme",
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "express-handlebars": "^4.0.4",
-    "method-override": "^3.0.0",
-    "mysql": "^2.18.1"
-  }
+  "homepage": "https://github.com/JKrayg/Burger#readme"
 }
