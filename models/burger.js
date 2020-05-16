@@ -17,6 +17,12 @@ var burgy = {
         orm.updateOne("burger", objColVals, condition, function (res) {
             cb(res);
         });
+    },
+
+    removeOne: function (condition, cb) {
+        orm.removeOne("burger", condition, function (res) {
+            cb(res);
+        })
     }
 
     
