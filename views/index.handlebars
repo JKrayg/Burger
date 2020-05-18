@@ -8,7 +8,7 @@
           {{#unless this.devoured}}
           <div class="undevouredBurgers">
             <h3>{{this.id}}. {{this.burger_name}}</h3>
-            <form action="/burger/{{this.id}}?_method=PUT" method="POST">
+            <form action="api/burger/{{this.id}}?_method=PUT" method="POST">
                 <button type="submit" class='devourButton'>Devour!</button>
               </form>
           </div>
@@ -24,7 +24,7 @@
           {{#if this.devoured}}
           <div class="devouredBurgers">
             <h3>{{this.id}}. {{this.burger_name}}</h3>
-            <form action="burger/{{this.id}}?_method=DELETE" method="POST">
+            <form action="api/burger/{{this.id}}?_method=DELETE" method="POST">
               <button type="submit" class="removeButton">Remove</button>
             </form>
           </div>

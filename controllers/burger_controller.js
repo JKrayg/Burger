@@ -18,7 +18,7 @@ router.post("/burger", function (req, res) {
   })
 });
 
-router.put("/burger/:id", function (req, res) {
+router.put("/api/burger/:id", function (req, res) {
   var condition = 'id = ' + req.params.id;
 
   burger.updateOne({
@@ -35,7 +35,7 @@ router.put("/burger/:id", function (req, res) {
   });
 });
 
-router.delete("/burger/:id", function (req, res) {
+router.delete("/api/burger/:id", function (req, res) {
   var condition = "id = " + req.params.id;
   burger.removeOne(condition, function (result) {
     if (result.affectedRows == 0) {
