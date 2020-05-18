@@ -10,7 +10,8 @@ if (process.env.JAWSDB_URL) {
     port: 3306,
     user: "root",
     password: "Rootpassword3574",
-    database: "burgers_db"
+    database: "burgers_db",
+    socketPath: '/var/run/mysqld/mysqld.sock'
   });
 }
 
