@@ -1,4 +1,4 @@
-var connection = require("./connection.js");
+var pool = require("./connection.js");
 
 function questionMarks(input) {
     var arr = [];
@@ -29,7 +29,7 @@ function objToSql(ob) {
 var orm = {
     selectAll: function (tableInput, cb) {
         var queryString = "SELECT * FROM " + tableInput + ";"
-        connection.query(queryString, function (err, result) {
+        pool.query(queryString, function (err, result) {
             if (err) {
                throw err; 
             };
@@ -49,7 +49,7 @@ var orm = {
 
         console.log(queryString);
 
-        connection.query(queryString, vals, function (err, result) {
+        pool.query(queryString, vals, function (err, result) {
             if (err) {
                throw err; 
             } 
@@ -65,7 +65,7 @@ var orm = {
         queryString += " WHERE ";
         queryString += condition;
 
-        connection.query(queryString, function (err, result) {
+        pool.query(queryString, function (err, result) {
             if (err) {
                 throw err;
             }
@@ -79,7 +79,7 @@ var orm = {
         queryString += " WHERE ";
         queryString += condition;
 
-        connection.query(queryString, function (err, result) {
+        pool.query(queryString, function (err, result) {
             if (err) {
                throw err; 
             }
